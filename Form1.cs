@@ -19,32 +19,7 @@ namespace lab_2_1_1
             txtn2.Text = Properties.Settings.Default.n2.ToString();
             txtn3.Text = Properties.Settings.Default.n3.ToString();
         }
-        public class Logic
-        {
-
-            public static int Multiplication(int n1, int n2, int n3)
-            {
-
-
-                int otvet = 0;
-
-                if (n1 >= n2 & n1 >= n3)
-                {
-                    otvet = n2 * n3;
-                }
-                else if (n2 >= n1 & n2 >= n3)
-                {
-                    otvet = n1 * n3;
-                }
-                else
-                {
-                    otvet = n2 * n1;
-                }
-
-                return otvet;
-            }
-
-        }
+       
         private void txtx_TextChanged(object sender, EventArgs e)
         {
 
@@ -94,6 +69,32 @@ namespace lab_2_1_1
             Properties.Settings.Default.Save();
 
             MessageBox.Show($"Ответ: {Logic.Multiplication(n1, n2, n3)}");
+        }
+
+    }
+    public class Logic
+    {
+
+        public static int Multiplication(int n1, int n2, int n3)
+        {
+
+
+            int otvet = 0;
+
+            if (n1 >= n2 & n1 >= n3)
+            {
+                otvet = n2 * n3;
+            }
+            else if (n2 >= n1 & n2 >= n3)
+            {
+                otvet = n1 * n3;
+            }
+            else
+            {
+                otvet = n2 * n1;
+            }
+
+            return otvet;
         }
 
     }
